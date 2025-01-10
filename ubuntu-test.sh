@@ -19,17 +19,6 @@ EOF
 sudo apt install npm <<EOF
 y
 EOF
-sudo apt install docker.io <<EOF
-y
-EOF
-sudo apt install apache2 <<EOF
-y
-EOF
-sudo apt install php libapache2-mod-php php-mysql
-sudo systemctl restart apache2
-sudo docker run -p 80:80 -p 443:443 -p 3000:3000 -e ACCEPTED_TERMS=true -e BY_PASS_PROXY_CHECK=true -v /var/run/docker.sock:/var/run/docker.sock -v /captain:/captain caprover/caprover
-sudo npm install -g caprover
-sudo caprover serversetup <<EOF
-y
-192.168.11.70
-EOF
+curl -sS https://installer.cloudpanel.io/ce/v2/install.sh -o install.sh; \
+echo "a3ba69a8102345127b4ae0e28cfe89daca675cbc63cd39225133cdd2fa02ad36 install.sh" | \
+sha256sum -c && sudo bash install.sh
