@@ -45,10 +45,7 @@ EOF
 sudo snap install authpass <<EOF
 y
 EOF
-curl -O https://download.jetbrains.com/webide/PhpStorm-2024.3.1.1.tar.gz
-untar ~/download.jetbrains.com/webide/PhpStorm-2024.3.1.1.tar.gz
-mv PhpStorm-2024.3.1.1 ~/phpstorm
-export PATH=$PATH:~/PhpStorm/bin
+sudo snap install --classic phpstorm
 mkdir ~/Projects
 curl -O http://launchpadlibrarian.net/648013231/libtinfo5_6.4-2_amd64.deb
 sudo dpkg -i libtinfo5_6.4-2_amd64.deb
