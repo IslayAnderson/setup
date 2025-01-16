@@ -3,6 +3,10 @@ sudo apt update
 sudo apt upgrade <<EOF
 y
 EOF
+sudo add-apt-repository universe
+sudo apt install gnome-tweaks <<EOF
+y
+EOF
 sudo apt install ssh <<EOF
 y
 EOF
