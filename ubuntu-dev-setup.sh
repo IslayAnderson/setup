@@ -38,6 +38,7 @@ EOF
 sudo apt install php <<EOF
 y
 EOF
+sudo apt install php-dom
 sudo apt install composer <<EOF
 y
 EOF
