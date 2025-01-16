@@ -32,6 +32,9 @@ EOF
 sudo apt install libnss3-tools <<EOF
 y
 EOF
+sudo apt install apache2 <<EOF
+y
+EOF
 sudo apt install php <<EOF
 y
 EOF
