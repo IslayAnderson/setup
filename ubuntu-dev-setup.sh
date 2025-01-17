@@ -53,6 +53,15 @@ mkdir ~/Projects
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<EOF
 y
 EOF
+sudo gpasswd -a $USER input
+newgrp input
+sudo apt-get install ruby <<EOF
+y
+EOF
+sudo gem install fusuma
+sudo apt-get install xdotool <<EOF
+y
+EOF
 curl -O http://launchpadlibrarian.net/648013231/libtinfo5_6.4-2_amd64.deb
 sudo dpkg -i libtinfo5_6.4-2_amd64.deb
 curl -O http://launchpadlibrarian.net/648013227/libncurses5_6.4-2_amd64.deb
