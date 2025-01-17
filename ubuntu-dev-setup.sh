@@ -42,11 +42,17 @@ sudo apt install php-dom
 sudo apt install composer <<EOF
 y
 EOF
+sudo apt install zsh <<EOF
+y
+EOF
 sudo snap install authpass <<EOF
 y
 EOF
 sudo snap install --classic phpstorm
 mkdir ~/Projects
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<EOF
+y
+EOF
 curl -O http://launchpadlibrarian.net/648013231/libtinfo5_6.4-2_amd64.deb
 sudo dpkg -i libtinfo5_6.4-2_amd64.deb
 curl -O http://launchpadlibrarian.net/648013227/libncurses5_6.4-2_amd64.deb
